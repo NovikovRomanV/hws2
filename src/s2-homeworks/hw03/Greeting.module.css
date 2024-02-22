@@ -1,0 +1,61 @@
+.greetingForm {
+    margin-top: 57px;
+    margin-left: 70px;
+}
+
+.inputAndButtonContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.error {
+    color: #cc0000;
+}
+
+.input {
+    color: black;
+    border: 1px #D1D1D1 solid;
+    width: 372px;
+    height: 36px;
+    border-radius: 5px;
+    padding-left: 12px;
+}
+
+.input:focus {
+    outline: none;
+
+}
+
+.errorInput {
+    border-color: #cc0000;
+    width: 372px;
+    height: 36px;
+    border-radius: 3px;
+}
+
+.button {
+    background-color: #0066CC;
+    color: white;
+    padding: 5px 24px 5px 24px;
+    margin-left: 12px;
+    border-radius: 3px;
+    height: 36px;
+}
+
+.button:focus {
+}
+
+.button:active {
+}
+
+.button:disabled {
+    opacity: 50%;
+}
+
+.text {
+    opacity: 50%;
+}
+
+.greeting {
+}

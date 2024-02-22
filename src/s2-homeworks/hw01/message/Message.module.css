@@ -1,0 +1,55 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vh;
+    margin-top: 10vh;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.imageAndText img {
+    width: 10vh;
+    max-height: 10vh;
+}
+
+img {
+    width: 10vh;
+    max-height: 10vh;
+}
+
+.text {
+    margin-right: 3vh;
+    background: #0066CC;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+    max-width: 65vh;
+}
+
+
+.text:after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    right: -20px; top: 25px; /* Положение треугольника */
+    border: 20px solid transparent; /* Прозрачные границы */
+    border-bottom: 15px solid #0066CC; /* Добавляем треугольник */
+}
+
+.name {
+    display: flex;
+    justify-content: end;
+}
+
+.messageText {
+    text-wrap: normal;
+}
+
+.time {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 2vh;
+}
