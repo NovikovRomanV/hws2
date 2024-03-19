@@ -1,8 +1,19 @@
 .burgerMenuIcon {
+    width: 24px;
+    height: 24px;
+    margin-top: 20px;
+    margin-left: 70px;
 }
 
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .header h1 {
+    margin-right: 100px;
 }
