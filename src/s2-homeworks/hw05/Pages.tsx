@@ -20,7 +20,7 @@ function Pages() {
                 {/*<Route path={'/page/:id'} element={<Page pages={dataState.pages}/>}/>*/}
 
                 {/*<Route path={'/*'} element={<Error404/>}/>*/}
-                <Route path={'/'} element={<Navigate to={'/pre-junior*/'}/>}/>
+                <Route path={'/'} element={<Navigate to={'/pre-junior/'}/>}/>
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
                 {/*<Route ...*/}
