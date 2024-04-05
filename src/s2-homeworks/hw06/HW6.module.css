@@ -1,5 +1,17 @@
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    margin-top: 24px;
+    width: 269px;
+    justify-content: space-between;
+}
+.buttonsContainer :hover {
+    width: 132px;
 }
 
 .editableSpanContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
 }
