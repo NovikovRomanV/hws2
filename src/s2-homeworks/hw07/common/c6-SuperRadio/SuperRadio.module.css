@@ -1,14 +1,26 @@
 .radio {
+    margin-left: 25px;
+    margin-right: 7px;
+    transform: scale(1.7);
+    opacity: 0.9;
+    cursor: pointer;
+    accent-color: black;
+
 }
 
 .radio::before {
+
 }
 
 
 .radio:checked::before {
+
 }
 
 .label {
+    display: block;
+    font-size: x-large;
+
 }
 
 .options {
