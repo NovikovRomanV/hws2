@@ -5,16 +5,40 @@
 }
 
 .users {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.users tr{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
 }
 
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 420px;
+    margin-left: 70px;
 }
+
+.buttonsContainer :hover {
+    width: 132px;
+}
+
+
+
 
 .container {
 }
 
 .thead {
+    background: #E5E5E5;
 }
+
 
 .nameCol {
 }
