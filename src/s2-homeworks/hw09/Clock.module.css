@@ -1,14 +1,33 @@
 .buttonsContainer {
+    margin-left: 25px;
+    display: flex;
+ width: 300px;
+    justify-content: space-between;
 }
 
+.buttonsContainer :hover {
+    width: 132px;
+
+}
+
+
 .clock {
+    margin-left: 25px;
 }
 
 .watch {
+    margin-left: 25px;
+}
+
+.watch :hover {
+    cursor: pointer
 }
 
 .watch strong {
 }
 
 .more {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 25px;
 }
