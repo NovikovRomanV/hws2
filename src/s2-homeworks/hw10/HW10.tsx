@@ -24,10 +24,10 @@ const HW10 = () => {
         dispatch(loadingAC(!isLoading))
             console.log('dispatch first ' + !isLoading)
         // setTimeout
-        // setTimeout(()=>{
-        //     dispatch(loadingAC(isLodingValue))
-        //     console.log('dispatch timeout ' + isLodingValue)
-        // },1500)
+        setTimeout(()=>{
+            dispatch(loadingAC(isLodingValue))
+            console.log('dispatch timeout ' + isLodingValue)
+        },1500)
     }
 
     return (
