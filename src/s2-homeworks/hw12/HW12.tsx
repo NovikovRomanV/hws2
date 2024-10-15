@@ -22,7 +22,7 @@ const HW12 = () => {
     // взять ид темы из редакса
 
     const [themeId, dispatchthemeId] = useReducer(themeReducer,{ themeId: 1 })
-
+console.log(themeId.themeId)
     const change = (id: number) => { // дописать функцию
         dispatchthemeId(changeThemeId(id))
     }

@@ -4,6 +4,8 @@ import React, {
     ChangeEvent,
 } from 'react'
 import s from './SuperSelect.module.css'
+import {useDispatch} from "react-redux";
+import {changeThemeId} from "../../../hw12/bll/themeReducer";
 
 type DefaultSelectPropsType = DetailedHTMLProps<
     SelectHTMLAttributes<HTMLSelectElement>,
@@ -22,6 +24,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
     onChangeOption,
     ...restProps
 }) => {
+    const dispatch = useDispatch()
     const mappedOptions: any[] = options
         ? options.map((o) => (
               <option
@@ -40,7 +43,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
             onChangeOption(+e.currentTarget.value)
         }
         // делают студенты
-
+        dispatch(changeThemeId(+e.currentTarget.value))
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')

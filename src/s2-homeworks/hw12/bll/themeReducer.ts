@@ -1,6 +1,4 @@
-const initState: InitStateTypeRED = {
-    themeId: 1,
-}
+const initState: InitStateTypeRED = {themeId: 1}
 
 export type InitStateTypeRED = { themeId: number }
 
