@@ -19,5 +19,12 @@ html {
 }
 
 .select {
-
+ margin-left: 25px;
+    width: 145px;
+    font-size: medium;
 }
+
+/*.hw12 {*/
+/*    margin-left: 25px;*/
+/*    margin-top: 35px;*/
+/*}*/
