@@ -1,16 +1,36 @@
-.buttonsContainer {
+.buttonsContainer button{
+    width: 150px;
+    color: #0066CC;
+    padding: 5px 24px;
+    margin-left: 25px;
+}
+.buttonsContainer button:hover{
+    width: 150px;
+
 }
 
 .responseContainer {
+    display: flex;
+    margin-top: 35px;
+    margin-left: 45px;
 }
 
 .imageContainer {
+
 }
 
 .image {
+    width: auto;
+    height: auto;
+    max-height: none;
+    max-width: none;
 }
 
+
+
 .textContainer{
+    padding-top: 5%;
+    padding-left: 5%;
 }
 
 .code {

@@ -4,6 +4,7 @@ import {AppStoreType} from './bll/store'
 import {loadingAC} from './bll/loadingReducer'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s2 from '../../s1-main/App.module.css'
+import s from './HW10.module.css'
 import {Loader} from './Loader'
 
 /*
@@ -31,7 +32,7 @@ const HW10 = () => {
     }
 
     return (
-        <div id={'hw10'}>
+        <div id={'hw10'} >
             <div className={s2.hwTitle}>Homework #10</div>
 
             <div className={s2.hw}>
@@ -40,12 +41,16 @@ const HW10 = () => {
                         <Loader/>
                     </div>
                 ) : (
-                    <SuperButton
-                        id={'hw10-button-start-loading'}
-                        onClick={setLoading}
-                    >
-                        Set loading...
-                    </SuperButton>
+                    <div className={s.hw10SuperButton}>
+                        <SuperButton
+    className={'hw10-button-start-loading'}
+                            // id={}
+                            onClick={setLoading}
+                        >
+                            Set loading...
+                        </SuperButton>
+                    </div>
+
                 )}
             </div>
         </div>

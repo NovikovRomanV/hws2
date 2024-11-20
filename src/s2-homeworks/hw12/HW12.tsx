@@ -2,7 +2,9 @@ import React, {useEffect, useReducer} from 'react'
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
-import {changeThemeId, themeReducer} from './bll/themeReducer'
+import {changeThemeId, InitStateTypeRED, themeReducer} from './bll/themeReducer'
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "./story";
 
 
 /*
@@ -20,11 +22,13 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
-
+// const dispatch = useDispatch()
+    // let themeId = useSelector<AppRootStateType, InitStateTypeRED >(state=>state.themeId)
     const [themeId, dispatchthemeId] = useReducer(themeReducer,{ themeId: 1 })
-console.log(themeId.themeId)
+console.log(themeId)
     const change = (id: number) => { // дописать функцию
         dispatchthemeId(changeThemeId(id))
+        // dispatch(changeThemeId(id))
     }
 
     useEffect(() => {
