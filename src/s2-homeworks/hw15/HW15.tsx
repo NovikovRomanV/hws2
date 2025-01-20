@@ -14,7 +14,11 @@ import SuperSort from './common/c10-SuperSort/SuperSort'
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW15 в HW5/pages/JuniorPlus
 * */
+type ParamsGet = {
+    techs: TechType[]
+    totalCount: number
 
+}
 type TechType = {
     id: number
     tech: string
@@ -51,20 +55,31 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
-                // делает студент
+                // делает студе
+                if (res) {
+                    setTechs(res.data.techs)
+                    setTotalCount(Number(res.data.totalCount))
+                }
 
                 // сохранить пришедшие данные
 
+
                 //
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
+        setPage(newPage)
+        setCount(newCount)
 
         // setPage(
         // setCount(
-
+sendQuery({sort: sort, page: newPage.toString(), count: count.toString()})
+setSearchParams({sort: sort, page: newPage.toString(), count: newCount.toString()})
         // sendQuery(
         // setSearchParams(
 
@@ -73,10 +88,12 @@ const HW15 = () => {
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
+        setSort(newSort)
+        setPage(1)
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
+        sendQuery({sort: sort, page: '1', count: count.toString()})
+        setSearchParams({sort: sort, page: '1', count: count.toString()})
         // sendQuery(
         // setSearchParams(
 
