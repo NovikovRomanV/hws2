@@ -73,29 +73,46 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-        setPage(newPage)
-        setCount(newCount)
-
-        // setPage(
-        // setCount(
-sendQuery({sort: sort, page: newPage.toString(), count: count.toString()})
-setSearchParams({sort: sort, page: newPage.toString(), count: newCount.toString()})
+//         setPage(newPage)
+//         setCount(newCount)
+//
+//         // setPage(
+//         // setCount(
+// sendQuery({sort: sort, page: newPage.toString(), count: count.toString()})
+// setSearchParams({sort: sort, page: newPage.toString(), count: newCount.toString()})
         // sendQuery(
         // setSearchParams(
+        setPage(newPage)
+        setCount(newCount)
+        const pageQuery: { page?: string } = newPage !== 1 ? {page: newPage + ''} : {}
+        const countQuery: { count?: string } = newCount !== 4 ? {count: newCount + ''} : {}
+        const {count, page, ...lastQueries} = Object.fromEntries(searchParams)
 
+        const allQuery = {...lastQueries, ...pageQuery, ...countQuery}
+        sendQuery(allQuery)
+        setSearchParams(allQuery)
         //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-        setSort(newSort)
-        setPage(1)
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-        sendQuery({sort: sort, page: '1', count: count.toString()})
-        setSearchParams({sort: sort, page: '1', count: count.toString()})
+        // setSort(newSort)
+        // setPage(1)
+        // // setSort(
+        // // setPage(1) // при сортировке сбрасывать на 1 страницу
+        // sendQuery({sort: sort, page: '1', count: count.toString()})
+        // setSearchParams({sort: sort, page: '1', count: count.toString()})
         // sendQuery(
         // setSearchParams(
+
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        const sortQuery: { sort?: string } = newSort !== '' ? {sort: newSort} : {}
+        const {sort, page, ...lastQueries} = Object.fromEntries(searchParams)
+
+        const allQuery = {...lastQueries, ...sortQuery}
+        sendQuery(allQuery)
+        setSearchParams(allQuery)
 
         //
     }
